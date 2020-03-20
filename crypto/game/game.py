@@ -10,7 +10,7 @@ game_running = True
 high_score = 653086069891774904466108141306028536722619133804
 
 def gen_hash(x):
-    with open('key.txt', 'r') as f:
+    with open('key.txt', 'r') as f: #is key sufficiently long to prevent brute force?
         key = f.read()[:-1]
         return hashlib.sha512(key + x).hexdigest() #concat is not good enough for hmac
 
@@ -70,7 +70,7 @@ def play_game():
         sys.stdout.flush()
         game_options[extract_int(raw_input())-1]()
         sys.stdout.flush()
-        if random.randint(1, 20) == 10:
+        if random.randint(1, 20) == 10: # predictable
             print 'ASTEROID!'
             game_running = False
         sys.stdout.flush()
