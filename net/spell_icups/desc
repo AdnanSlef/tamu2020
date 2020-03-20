@@ -1,0 +1,1 @@
+I turned on a small CUPS server we found in the back for saving PDFs that we make locally. Didn't have SSH or anything, though, but thankfully it had socat.

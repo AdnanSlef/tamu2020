@@ -1,0 +1,11 @@
+Welcome admin. Select an option:
+
+	1. Enter password
+	2. Reset password
+	3. Exit
+Traceback (most recent call last):
+  File "/crypto/server.py", line 92, in <module>
+    run_server()
+  File "/crypto/server.py", line 87, in run_server
+    option = int(input())
+ValueError: invalid literal for int() with base 10: 'la'
